@@ -410,10 +410,30 @@ footer {
         color: var(--primary-color);
         font-weight: 600;
     }
+    .carousel-caption h5 {
+        font-size: 1.6rem;
+    }
 }
 
-@media (width <=500px) {
-    
+@media (width <=576px) {
+    .carousel-item img {
+        height: 100%;
+    }
+    .carousel-item {
+        height: 70vh;
+    }
+    .primary-heading {
+        font-size: 2.5rem;
+    }
+    .caption {
+        padding: 1rem;
+        font-size: 1.7rem;
+        width: 25rem;
+    }
+    .slick-slide img {
+        width: 25rem;
+        height: 25rem;
+    }
 }
 
 @media (width <=400px) {}
