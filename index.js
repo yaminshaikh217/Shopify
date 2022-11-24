@@ -15,7 +15,7 @@ $(document).ready(function () {
         breakpoint: 1600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           infinite: true,
           dots: false,
         },
@@ -48,8 +48,7 @@ menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("active");
   if (nav.classList.contains("active")) {
     document.body.style.overflowY = "hidden";
-  }
-  else{
+  } else {
     document.body.style.overflowY = "inherit";
   }
 });
