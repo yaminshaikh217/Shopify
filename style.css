@@ -208,7 +208,7 @@ nav {
 
 .about-section,
 .product-section {
-    padding: 5rem 0;
+    padding: max(2rem, 5vh) 0;
 }
 
 .about-img img {
@@ -378,7 +378,17 @@ footer {
 
 /* Media Queries  */
 
-@media (width <=1200px) {}
+@media (width <=991px) {
+    .info , .footer-links , .newsletter input{
+        font-size: 1.5rem;
+    }
+    .primary-btn , .footer-head{
+        font-size: 1.7rem;
+    }
+    .fig-cap , .product .fa-arrow-right {
+        font-size: 2.5rem;
+    }
+}
 
 @media (width <=768px) {
     .menu-btn {
@@ -387,9 +397,11 @@ footer {
         cursor: pointer;
         transition: all 0.2s linear;
     }
+
     .menu-btn.active {
         color: var(--primary-color);
     }
+
     nav ul {
         position: fixed;
         inset: 0;
@@ -402,16 +414,30 @@ footer {
         transform-origin: right;
         transition: all 0.3s ease-out;
     }
+
     nav ul.active {
         opacity: 1;
         transform: scaleX(1) translateX(0);
     }
+
     .nav-links {
         color: var(--primary-color);
         font-weight: 600;
     }
+
     .carousel-caption h5 {
         font-size: 1.6rem;
+    }
+    .about , .product {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .about-img img {
+        box-shadow: 21px -20px 0 0 rgb(161 201 248 / 25%);
+    }
+    .footer {
+        flex-direction: column;
+        gap: 2rem;
     }
 }
 
@@ -419,17 +445,21 @@ footer {
     .carousel-item img {
         height: 100%;
     }
+
     .carousel-item {
         height: 70vh;
     }
+
     .primary-heading {
         font-size: 2.5rem;
     }
+
     .caption {
         padding: 1rem;
         font-size: 1.7rem;
         width: 25rem;
     }
+
     .slick-slide img {
         width: 25rem;
         height: 25rem;
