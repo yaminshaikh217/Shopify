@@ -352,7 +352,7 @@ footer {
 /* product-listing styles */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     width: 80%;
     margin-inline: auto;
     gap: 3rem;
@@ -379,14 +379,27 @@ footer {
 /* Media Queries  */
 
 @media (width <=991px) {
-    .info , .footer-links , .newsletter input{
+
+    .info,
+    .footer-links,
+    .newsletter input {
         font-size: 1.5rem;
     }
-    .primary-btn , .footer-head{
+
+    .primary-btn,
+    .footer-head {
         font-size: 1.7rem;
     }
-    .fig-cap , .product .fa-arrow-right {
+
+    .fig-cap,
+    .product .fa-arrow-right {
         font-size: 2.5rem;
+    }
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .products-list p {
+        font-size: 1.8rem;
     }
 }
 
@@ -428,13 +441,17 @@ footer {
     .carousel-caption h5 {
         font-size: 1.6rem;
     }
-    .about , .product {
+
+    .about,
+    .product {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
     .about-img img {
         box-shadow: 21px -20px 0 0 rgb(161 201 248 / 25%);
     }
+
     .footer {
         flex-direction: column;
         gap: 2rem;
@@ -442,6 +459,9 @@ footer {
 }
 
 @media (width <=576px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
     .carousel-item img {
         height: 100%;
     }
